@@ -1,10 +1,101 @@
 :root {
-	--coffee: #694A38;
-	--burgundy: #A61C3C;
-	--straw: #ECDD7B;
+	--primary-xtra-light: #f3f5f2;
+	--primary-light: #cfd7cd;
+	--primary: #84A07C;
+	--primary-dark: #2c5021;
+	--secondary-xtra-light: #f5edf1;
+	--secondary-light: #e0cad4;
+	--secondary: #9E4770;
+	--secondary-dark: #360f21;
+	--tertiary-xtra-light: #f1eff4;
+	--tertiary-light: #c8c0d3;
+	--tertiary: #876ead;
+	--tertiary-dark: #24153d;
+	--neutral-xtra-light: #e3e5ed;
+	--neutral-light: #bdbdc3;
+	--neutral: #62626c;
+	--neutral-dark: #060813;
 }
 
+body { background-color: var(--neutral-light) }
+
 .jumbotron {
-	background: var(--coffee);
+	background: var(--neutral-dark);
 	color: white;
+}
+
+.employee-card {
+	flex: 1;
+	max-width: 33%;
+	min-width: 25%;
+	padding-bottom: 1.5rem;
+	border: 0;
+	border-radius: 0 0 0.7rem 0.7rem;
+	overflow: hidden;
+	box-shadow: 6px 11px 17px -7px var(--neutral), -6px 11px 17px -7px var(--neutral), 0 5px 7px -3px var(--neutral);
+}
+
+.manager {
+	background-color: var(--primary-xtra-light);
+}
+
+.engineer {
+	background-color: var(--secondary-xtra-light);
+}
+
+.intern {
+	background-color: var(--tertiary-xtra-light);
+}
+
+.manager .card-header {
+	background: var(--primary-dark);
+	color: white;
+}
+
+.engineer .card-header {
+	background-color: var(--secondary-dark);
+	color: white;
+}
+
+.intern .card-header {
+	background-color: var(--tertiary-dark);
+	color: white;
+}
+
+.manager .card-title:nth-child(2) {
+	color: var(--primary-light);
+}
+
+.engineer .card-title:nth-child(2) {
+	color: var(--secondary-light);
+}
+
+.intern .card-title:nth-child(2) {
+	color: var(--tertiary-light);
+}
+
+.manager .card-header i {
+	color: var(--primary);
+}
+
+.engineer .card-header i {
+	color: var(--secondary);
+}
+
+.intern .card-header i {
+	color: var(--tertiary);
+}
+
+.list-group-item {
+	border-left: 0;
+	border-right: 0;
+	border-color: var(--primary-light);
+	padding-bottom: 0.3rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	background-color: transparent;
+}
+
+.list-group-item:first-child {
+	border-top: 0;
 }
