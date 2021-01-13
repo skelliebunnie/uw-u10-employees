@@ -18,7 +18,7 @@ function init() {
 		addManager();
 
 	} else {
-		addEmployees();
+		addEmployee();
 
 	}
 }
@@ -70,14 +70,15 @@ function addManager() {
 		manager = answers;
 
 		console.log(manager);
-		addEmployees();
+		addEmployee();
+
 	})
 	.catch(err => {
 		console.error(error);
 	});
 }
 
-function addEmployees() {
+function addEmployee() {
 	inquirer.prompt([
 			{
 				type: "list",
@@ -85,11 +86,11 @@ function addEmployees() {
 				name: "action",
 				choices: [
 					{
-						name: "add Engineer",
+						name: "Add Engineer",
 						value: "addEngineer"
 					},
 					{
-						name: "add Intern",
+						name: "Add Intern",
 						value: "addIntern"
 					},
 					{
@@ -143,6 +144,8 @@ function addEngineer() {
 	])
 	.then(answers => {
 		console.log(answers);
+
+		addEmployee();
 	})
 	.catch(err => {
 		console.error(error);
@@ -174,6 +177,8 @@ function addIntern() {
 	])
 	.then(answers => {
 		console.log(answers);
+
+		addEmployee();
 	})
 	.catch(err => {
 		console.error(error);
