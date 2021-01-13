@@ -12,6 +12,7 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 let manager = null;
+let team = [];
 
 function init() {
 	if(manager === null) {
@@ -61,15 +62,14 @@ function addManager() {
 			message: "Manager's ID: "
 		},
 		{
-			type: "input",
-			name: "github",
+			type: "number",
+			name: "officeNumber",
 			message: "Manager's Office Number: "
 		}
 	])
 	.then(answers => {
-		manager = answers;
-
-		console.log(manager);
+		manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+		team.push(manager);
 		addEmployee();
 
 	})
@@ -110,7 +110,10 @@ function addEmployee() {
 			}
 
 			if(answers.action === "exit") {
-				console.log("render will be called here");
+				let results = render(team);
+				fs.writeFile(outputPath, results, (err) =>
+				  err ? console.error(err) : console.log(`File saved to ${outputPath}!`)
+				);
 			}
 
 		})
@@ -143,7 +146,8 @@ function addEngineer() {
 		}
 	])
 	.then(answers => {
-		console.log(answers);
+		let eng = new Engineer(answers.name, answers.id, answers.email, answers.github);
+		team.push(eng);
 
 		addEmployee();
 	})
@@ -171,12 +175,13 @@ function addIntern() {
 		},
 		{
 			type: "input",
-			name: "github",
+			name: "school",
 			message: "Intern's School: "
 		}
 	])
 	.then(answers => {
-		console.log(answers);
+		let int = new Intern(answers.name, answers.id, answers.email, answers.school);
+		team.push(int);
 
 		addEmployee();
 	})

@@ -1,0 +1,10 @@
+:root {
+	--coffee: #694A38;
+	--burgundy: #A61C3C;
+	--straw: #ECDD7B;
+}
+
+.jumbotron {
+	background: var(--coffee);
+	color: white;
+}
