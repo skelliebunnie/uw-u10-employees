@@ -12,6 +12,9 @@ Generate an HTML page with basic employee info for your team. Generator is run f
 * [Questions](#Questions)
 * [License](#License)
 
+|Screenshot | Usage (GIF)|
+|------------|------------|
+|!["Screenshot"](screenshot.png) | !["Screenshot"](screenshot.png)|
 
 ## Installing
 - ```git clone``` the repo

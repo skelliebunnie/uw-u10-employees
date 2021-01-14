@@ -22,10 +22,12 @@ body { background-color: var(--neutral-light) }
 .jumbotron {
 	background: var(--neutral-dark);
 	color: white;
+	border-radius: 0;
+	overflow: visible;
 }
 
 .employee-card {
-	flex: 1;
+	flex: 1 0 40%;
 	min-width: 40%;
 	padding-bottom: 1.5rem;
 	border: 0;
@@ -101,6 +103,7 @@ body { background-color: var(--neutral-light) }
 
 @media all and (min-width: 768px) {
 	.employee-card {
+		min-width: 25%;
 		max-width: 25%;
 	}
 }
