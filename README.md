@@ -12,9 +12,10 @@ Generate an HTML page with basic employee info for your team. Generator is run f
 * [Questions](#Questions)
 * [License](#License)
 
-|Screenshot | Usage (GIF)|
-|------------|------------|
-|!["Screenshot"](screenshot.png) | !["Screenshot"](screenshot.png)|
+!["Screenshot"](screenshot.png)
+
+[!["Screenshot"](team-page-generator.gif)](https://drive.google.com/file/d/1_xhOIw2f-WrxE13LRzyNIkwmhQ_vIIpo/view)  
+*Click to view the full-size video on Google Drive*
 
 ## Installing
 - ```git clone``` the repo
@@ -23,8 +24,9 @@ Generate an HTML page with basic employee info for your team. Generator is run f
 ## Usage
 - Run ```node index.js``` to start the generator
 - Answer the prompts until you've added info for all employees on your team
+- The "What do you want to do?" prompt repeats ad infinitum until you select ```exit```
 
-The HTML page is saved to output as ```team.html``` 
+The HTML page is saved to the ```output``` directory as ```team.html``` 
 
 ### Contributing
 You're welcome to either fork the repo or submit a pull request with an update. This was a homework assignment, however, so it's not meant to be fancy or robust.
@@ -37,6 +39,8 @@ run ```npm test``` (or ```npm run test```) to run the included jest tests.
 - Email me at: skelliebunnie@gmail.com
 
 ### License
+MIT LICENSE 
+
 Copyright (C) 2021 Angel
 
 https://opensource.org/licenses/MIT
